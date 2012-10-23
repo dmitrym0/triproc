@@ -25,14 +25,14 @@
 
 
 @implementation DNATriangle
--(id) initWithX:(DNAPoint*)x y:(DNAPoint*)y z:(DNAPoint*)z
+-(id) initWithP1:(DNAPoint*)p1 p2:(DNAPoint*)p2 p3:(DNAPoint*)p3
 {
     self = [super init];
     if (self) {
         _points = [[NSMutableArray alloc] init];
-        [_points addObject:x];
-        [_points addObject:y];
-        [_points addObject:z];
+        [_points addObject:p1];
+        [_points addObject:p2];
+        [_points addObject:p3];
     }
     return self;
 }

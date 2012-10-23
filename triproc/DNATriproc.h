@@ -20,7 +20,7 @@
 
 @interface DNATriangle : NSObject
 @property( nonatomic, strong) NSMutableArray* points;
--(id) initWithX:(DNAPoint*)x y:(DNAPoint*)y z:(DNAPoint*)z;
+-(id) initWithP1:(DNAPoint*)p1 p2:(DNAPoint*)p2 p3:(DNAPoint*)p3;
 @end
 
 
