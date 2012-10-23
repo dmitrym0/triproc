@@ -10,6 +10,12 @@
 		09EC369F16365275008A4D3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EC369E16365275008A4D3D /* Foundation.framework */; };
 		09EC36A216365275008A4D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36A116365275008A4D3D /* main.m */; };
 		09EC36A616365275008A4D3D /* triproc.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09EC36A516365275008A4D3D /* triproc.1 */; };
+		09EC36B616365C73008A4D3D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EC36B516365C73008A4D3D /* SenTestingKit.framework */; };
+		09EC36B816365C73008A4D3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EC36B716365C73008A4D3D /* Cocoa.framework */; };
+		09EC36C216365C73008A4D3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09EC36C016365C73008A4D3D /* InfoPlist.strings */; };
+		09EC36C516365C73008A4D3D /* triproctest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36C416365C73008A4D3D /* triproctest.m */; };
+		09EC36CC16365CB6008A4D3D /* DNATriproc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36CB16365CB6008A4D3D /* DNATriproc.m */; };
+		09EC36CD16365CB6008A4D3D /* DNATriproc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36CB16365CB6008A4D3D /* DNATriproc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +37,19 @@
 		09EC36A116365275008A4D3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09EC36A416365275008A4D3D /* triproc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "triproc-Prefix.pch"; sourceTree = "<group>"; };
 		09EC36A516365275008A4D3D /* triproc.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = triproc.1; sourceTree = "<group>"; };
+		09EC36B416365C73008A4D3D /* triproctest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = triproctest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09EC36B516365C73008A4D3D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		09EC36B716365C73008A4D3D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		09EC36BA16365C73008A4D3D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		09EC36BB16365C73008A4D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		09EC36BC16365C73008A4D3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		09EC36BF16365C73008A4D3D /* triproctest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "triproctest-Info.plist"; sourceTree = "<group>"; };
+		09EC36C116365C73008A4D3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		09EC36C316365C73008A4D3D /* triproctest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = triproctest.h; sourceTree = "<group>"; };
+		09EC36C416365C73008A4D3D /* triproctest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = triproctest.m; sourceTree = "<group>"; };
+		09EC36C616365C73008A4D3D /* triproctest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "triproctest-Prefix.pch"; sourceTree = "<group>"; };
+		09EC36CA16365CB6008A4D3D /* DNATriproc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNATriproc.h; sourceTree = "<group>"; };
+		09EC36CB16365CB6008A4D3D /* DNATriproc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNATriproc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +61,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09EC36B016365C73008A4D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09EC36B616365C73008A4D3D /* SenTestingKit.framework in Frameworks */,
+				09EC36B816365C73008A4D3D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				09EC36A016365275008A4D3D /* triproc */,
+				09EC36BD16365C73008A4D3D /* triproctest */,
 				09EC369D16365275008A4D3D /* Frameworks */,
 				09EC369B16365275008A4D3D /* Products */,
 			);
@@ -58,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				09EC369A16365275008A4D3D /* triproc */,
+				09EC36B416365C73008A4D3D /* triproctest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				09EC369E16365275008A4D3D /* Foundation.framework */,
+				09EC36B516365C73008A4D3D /* SenTestingKit.framework */,
+				09EC36B716365C73008A4D3D /* Cocoa.framework */,
+				09EC36B916365C73008A4D3D /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,9 +106,11 @@
 		09EC36A016365275008A4D3D /* triproc */ = {
 			isa = PBXGroup;
 			children = (
+				09EC36A316365275008A4D3D /* Supporting Files */,
 				09EC36A116365275008A4D3D /* main.m */,
 				09EC36A516365275008A4D3D /* triproc.1 */,
-				09EC36A316365275008A4D3D /* Supporting Files */,
+				09EC36CA16365CB6008A4D3D /* DNATriproc.h */,
+				09EC36CB16365CB6008A4D3D /* DNATriproc.m */,
 			);
 			path = triproc;
 			sourceTree = "<group>";
@@ -84,6 +119,36 @@
 			isa = PBXGroup;
 			children = (
 				09EC36A416365275008A4D3D /* triproc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09EC36B916365C73008A4D3D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09EC36BA16365C73008A4D3D /* AppKit.framework */,
+				09EC36BB16365C73008A4D3D /* CoreData.framework */,
+				09EC36BC16365C73008A4D3D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		09EC36BD16365C73008A4D3D /* triproctest */ = {
+			isa = PBXGroup;
+			children = (
+				09EC36C316365C73008A4D3D /* triproctest.h */,
+				09EC36C416365C73008A4D3D /* triproctest.m */,
+				09EC36BE16365C73008A4D3D /* Supporting Files */,
+			);
+			path = triproctest;
+			sourceTree = "<group>";
+		};
+		09EC36BE16365C73008A4D3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09EC36BF16365C73008A4D3D /* triproctest-Info.plist */,
+				09EC36C016365C73008A4D3D /* InfoPlist.strings */,
+				09EC36C616365C73008A4D3D /* triproctest-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +173,24 @@
 			productReference = 09EC369A16365275008A4D3D /* triproc */;
 			productType = "com.apple.product-type.tool";
 		};
+		09EC36B316365C73008A4D3D /* triproctest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09EC36C716365C73008A4D3D /* Build configuration list for PBXNativeTarget "triproctest" */;
+			buildPhases = (
+				09EC36AF16365C73008A4D3D /* Sources */,
+				09EC36B016365C73008A4D3D /* Frameworks */,
+				09EC36B116365C73008A4D3D /* Resources */,
+				09EC36B216365C73008A4D3D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = triproctest;
+			productName = triproctest;
+			productReference = 09EC36B416365C73008A4D3D /* triproctest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,9 +213,37 @@
 			projectRoot = "";
 			targets = (
 				09EC369916365275008A4D3D /* triproc */,
+				09EC36B316365C73008A4D3D /* triproctest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09EC36B116365C73008A4D3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09EC36C216365C73008A4D3D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09EC36B216365C73008A4D3D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09EC369616365275008A4D3D /* Sources */ = {
@@ -140,10 +251,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EC36A216365275008A4D3D /* main.m in Sources */,
+				09EC36CC16365CB6008A4D3D /* DNATriproc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09EC36AF16365C73008A4D3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09EC36C516365C73008A4D3D /* triproctest.m in Sources */,
+				09EC36CD16365CB6008A4D3D /* DNATriproc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09EC36C016365C73008A4D3D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09EC36C116365C73008A4D3D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		09EC36A716365275008A4D3D /* Debug */ = {
@@ -217,6 +349,32 @@
 			};
 			name = Release;
 		};
+		09EC36C816365C73008A4D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "triproctest/triproctest-Prefix.pch";
+				INFOPLIST_FILE = "triproctest/triproctest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		09EC36C916365C73008A4D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "triproctest/triproctest-Prefix.pch";
+				INFOPLIST_FILE = "triproctest/triproctest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -234,6 +392,14 @@
 			buildConfigurations = (
 				09EC36AA16365275008A4D3D /* Debug */,
 				09EC36AB16365275008A4D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		09EC36C716365C73008A4D3D /* Build configuration list for PBXNativeTarget "triproctest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09EC36C816365C73008A4D3D /* Debug */,
+				09EC36C916365C73008A4D3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
