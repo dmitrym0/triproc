@@ -68,7 +68,7 @@
     DNAPoint* p3 = [[DNAPoint alloc] initWithString:@"-5 -4 6"];
     DNAPoint* p2 = [[DNAPoint alloc] initWithString:@"3 -3 4"];
     DNATriangle* t = [[DNATriangle alloc] initWithP1:p2 p2:p3 p3:p1];
-    STAssertTrue(t.area - 54.463290389 < AREA_ERROR, @"Unexpected area!");
+    STAssertTrue(abs(t.area - 54.463290389) < AREA_ERROR, @"Unexpected area: %f", t.area);
     
 }
 
@@ -82,6 +82,6 @@
     DNATriangle* t2 = [[DNATriangle alloc] initWithP1:p2 p2:p3 p3:p1];
 
     STAssertEqualObjects(t1, t2, @"Should be equal triangles");
-    STAssertEquals(t1.area, t2.area, @"Same triangles, should be same area");
+    STAssertTrue(abs(t1.area - t2.area) < AREA_ERROR, @"Same triangles, should be same area");
 }
 @end

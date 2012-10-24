@@ -67,7 +67,7 @@
     double c1, c2, c3;
     
     c1 = p1.y * p2.z - p1.z * p2.y;
-    c2 = p1.x * p2.z + p2.x * p1.z;
+    c2 = p1.x * p2.z - p2.x * p1.z;
     c3 = p1.x * p2.y - p2.x * p1.y;
     
     return 0.5 * sqrt(pow(c1, 2) +
