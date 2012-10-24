@@ -22,6 +22,8 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         DLog(@"Starting!");
         
+        
+        // read the file
         NSString* file = [NSString stringWithCString:argv[1] encoding:NSASCIIStringEncoding];
         
         if (![[NSFileManager defaultManager] fileExistsAtPath:file])
@@ -30,11 +32,14 @@ int main(int argc, const char * argv[])
             return 0;
         }
 
+        
+        // generate triangles from the data
         DNATriangleGenerator* generator = [[DNATriangleGenerator alloc] init];
         NSArray* triangles = [generator generateWithFile:file];
         
         DLog(@"%d triangles", (int)triangles.count);
         
+        // sort triangles by area
         NSArray* sortedTriangles = [triangles sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             DNATriangle* t1 = (DNATriangle*) obj1;
             DNATriangle* t2 = (DNATriangle*) obj2;
@@ -42,6 +47,8 @@ int main(int argc, const char * argv[])
         }];
         
         
+        
+        // go through the sorted list, remove duplicates and degenerates
         NSMutableArray* finalTriangleList = [[NSMutableArray alloc] init];
         
         DNATriangle* previousTraingle = nil;
@@ -67,7 +74,6 @@ int main(int argc, const char * argv[])
         }
         
        
-        DLog(@"Done.");
         DLog(@"Identical triangles=%d. Degenerate triangles=%d total resulting triangles=%d original number of triangles=%d", identicalTriangles, degenerateTriangles, (int)finalTriangleList.count, (int)sortedTriangles.count);
     
     }
