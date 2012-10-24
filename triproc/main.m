@@ -50,16 +50,14 @@ int main(int argc, const char * argv[])
 
         for (DNATriangle* t in sortedTriangles)
         {
-            if (t.area < 10)
-                DLog(@"%f --- ", t.area);
             if (t.area < AREA_ERROR)
             {
-                DLog(@"Degenerate triangle");
+                DLog(@"Degenerate triangle.");
                 degenerateTriangles++;
             }
             else if(abs(previousTraingle.area - t.area) < ERROR && [t isEqual:previousTraingle])
             {
-                DLog(@"Same area: %f", t.area);
+                DLog(@"Identical triangle.");
                 identicalTriangles++;
             } else {
                 [finalTriangleList addObject:t];
