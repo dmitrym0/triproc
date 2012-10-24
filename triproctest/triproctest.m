@@ -49,7 +49,26 @@
     DNATriangle* t = [[DNATriangle alloc] initWithP1:p1 p2:p2 p3:p3];
     STAssertNotNil(t, @"Triangle can't be nil");
     STAssertEquals(t.points.count,(NSUInteger) 3, @"Should be 3 points");
-    
+}
+
+-(void) testSubtract
+{
+    DNAPoint* p1 = [[DNAPoint alloc] initWithString:@"-5 4 -5"];
+    DNAPoint* p2 = [[DNAPoint alloc] initWithString:@"-5 -4 6"];
+    DNAPoint* newP = [p1 subtract:p2];
+    STAssertEquals(0.0, newP.x, @"");
+    STAssertEquals(8.0, newP.y, @"");
+    STAssertEquals(-11.0, newP.z, @"");
+}
+
+-(void) testArea
+{
+    // from here: http://answers.yahoo.com/question/index?qid=20110210122955AARoWJb
+    DNAPoint* p1 = [[DNAPoint alloc] initWithString:@"-5 4 -5"];
+    DNAPoint* p2 = [[DNAPoint alloc] initWithString:@"-5 -4 6"];
+    DNAPoint* p3 = [[DNAPoint alloc] initWithString:@"3 -3 4"];
+    DNATriangle* t = [[DNATriangle alloc] initWithP1:p1 p2:p2 p3:p3];
+    STAssertTrue(t.area - 54.463290389 < AREA_ERROR, @"Unexpected area!");
     
 }
 @end

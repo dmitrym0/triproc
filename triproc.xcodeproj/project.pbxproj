@@ -16,6 +16,10 @@
 		09EC36C516365C73008A4D3D /* triproctest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36C416365C73008A4D3D /* triproctest.m */; };
 		09EC36CC16365CB6008A4D3D /* DNATriproc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36CB16365CB6008A4D3D /* DNATriproc.m */; };
 		09EC36CD16365CB6008A4D3D /* DNATriproc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36CB16365CB6008A4D3D /* DNATriproc.m */; };
+		09EC36D416378BF8008A4D3D /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36D316378BF8008A4D3D /* FileReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09EC36D516378BF8008A4D3D /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36D316378BF8008A4D3D /* FileReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09EC36D916378C3B008A4D3D /* NSDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36D816378C3B008A4D3D /* NSDataExtensions.m */; };
+		09EC36DA16378C3B008A4D3D /* NSDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EC36D816378C3B008A4D3D /* NSDataExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +54,10 @@
 		09EC36C616365C73008A4D3D /* triproctest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "triproctest-Prefix.pch"; sourceTree = "<group>"; };
 		09EC36CA16365CB6008A4D3D /* DNATriproc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNATriproc.h; sourceTree = "<group>"; };
 		09EC36CB16365CB6008A4D3D /* DNATriproc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNATriproc.m; sourceTree = "<group>"; };
+		09EC36D216378BF8008A4D3D /* FileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
+		09EC36D316378BF8008A4D3D /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
+		09EC36D716378C3B008A4D3D /* NSDataExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataExtensions.h; path = triproc/NSDataExtensions.h; sourceTree = "<group>"; };
+		09EC36D816378C3B008A4D3D /* NSDataExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataExtensions.m; path = triproc/NSDataExtensions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,8 @@
 		09EC368F16365275008A4D3D = {
 			isa = PBXGroup;
 			children = (
+				09EC36D716378C3B008A4D3D /* NSDataExtensions.h */,
+				09EC36D816378C3B008A4D3D /* NSDataExtensions.m */,
 				09EC36A016365275008A4D3D /* triproc */,
 				09EC36BD16365C73008A4D3D /* triproctest */,
 				09EC369D16365275008A4D3D /* Frameworks */,
@@ -106,6 +116,8 @@
 		09EC36A016365275008A4D3D /* triproc */ = {
 			isa = PBXGroup;
 			children = (
+				09EC36D216378BF8008A4D3D /* FileReader.h */,
+				09EC36D316378BF8008A4D3D /* FileReader.m */,
 				09EC36A316365275008A4D3D /* Supporting Files */,
 				09EC36A116365275008A4D3D /* main.m */,
 				09EC36A516365275008A4D3D /* triproc.1 */,
@@ -252,6 +264,8 @@
 			files = (
 				09EC36A216365275008A4D3D /* main.m in Sources */,
 				09EC36CC16365CB6008A4D3D /* DNATriproc.m in Sources */,
+				09EC36D416378BF8008A4D3D /* FileReader.m in Sources */,
+				09EC36D916378C3B008A4D3D /* NSDataExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +275,8 @@
 			files = (
 				09EC36C516365C73008A4D3D /* triproctest.m in Sources */,
 				09EC36CD16365CB6008A4D3D /* DNATriproc.m in Sources */,
+				09EC36D516378BF8008A4D3D /* FileReader.m in Sources */,
+				09EC36DA16378C3B008A4D3D /* NSDataExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +410,7 @@
 				09EC36AB16365275008A4D3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09EC36C716365C73008A4D3D /* Build configuration list for PBXNativeTarget "triproctest" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +419,7 @@
 				09EC36C916365C73008A4D3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
