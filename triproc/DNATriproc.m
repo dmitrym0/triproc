@@ -117,6 +117,7 @@
         }
         line = [fr readTrimmedLine];
     }
+    NSAssert(triangles.count > 0, @"No triangles in the file!");
     return triangles;
 }
 @end
