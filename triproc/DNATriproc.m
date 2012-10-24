@@ -24,6 +24,12 @@
     return self;
 }
 
+-(BOOL) isEqual:(DNAPoint*) p
+{
+    DNAPoint* result = [self subtract:p];
+    return (abs(result.x) < ERROR && abs(result.y) < ERROR && abs(result.z) < ERROR);
+}
+
 -(DNAPoint*) subtract:(DNAPoint *)p{
     DNAPoint* newPoint = [[DNAPoint alloc] init];
     newPoint.x = self.x - p.x;
@@ -69,9 +75,23 @@
                       pow(c3, 2));
 }
 
--(BOOL) equals:(DNATriangle*) t
+-(BOOL) isEqual:(DNATriangle*) t
 {
-    return NO;
+    BOOL allThreePointsMatch = YES;
+    for (DNAPoint* p1 in self.points) {
+        BOOL foundEqualPoint = NO;
+        for (DNAPoint* p2 in t.points) {
+            if ([p1 isEqual:p2])
+            {
+                foundEqualPoint = YES;
+                break;
+            }
+        }
+        if (!foundEqualPoint)
+            allThreePointsMatch = NO;
+    }
+    return allThreePointsMatch;
+    
 }
 @end
 

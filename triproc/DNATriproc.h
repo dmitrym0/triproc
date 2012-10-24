@@ -10,6 +10,7 @@
 
 
 #define AREA_ERROR 0.0001
+#define ERROR 0.0001
 
 @interface DNAPoint: NSObject
 @property (nonatomic, assign) double x;

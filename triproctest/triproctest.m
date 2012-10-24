@@ -65,10 +65,23 @@
 {
     // from here: http://answers.yahoo.com/question/index?qid=20110210122955AARoWJb
     DNAPoint* p1 = [[DNAPoint alloc] initWithString:@"-5 4 -5"];
-    DNAPoint* p2 = [[DNAPoint alloc] initWithString:@"-5 -4 6"];
-    DNAPoint* p3 = [[DNAPoint alloc] initWithString:@"3 -3 4"];
-    DNATriangle* t = [[DNATriangle alloc] initWithP1:p1 p2:p2 p3:p3];
+    DNAPoint* p3 = [[DNAPoint alloc] initWithString:@"-5 -4 6"];
+    DNAPoint* p2 = [[DNAPoint alloc] initWithString:@"3 -3 4"];
+    DNATriangle* t = [[DNATriangle alloc] initWithP1:p2 p2:p3 p3:p1];
     STAssertTrue(t.area - 54.463290389 < AREA_ERROR, @"Unexpected area!");
     
+}
+
+-(void) testTriangleEqualArea
+{
+    DNAPoint* p1 = [[DNAPoint alloc] initWithString:@"-8940.573671 -4889.246366 -4102.811554"];
+    DNAPoint* p2 = [[DNAPoint alloc] initWithString:@"-9690.582395 -3683.685525 -3602.557407"];
+    DNAPoint* p3 = [[DNAPoint alloc] initWithString:@"-1238.415863 9909.075444 2613.909473"];
+    
+    DNATriangle* t1 = [[DNATriangle alloc] initWithP1:p1 p2:p2 p3:p3];
+    DNATriangle* t2 = [[DNATriangle alloc] initWithP1:p2 p2:p3 p3:p1];
+
+    STAssertEqualObjects(t1, t2, @"Should be equal triangles");
+    STAssertEquals(t1.area, t2.area, @"Same triangles, should be same area");
 }
 @end

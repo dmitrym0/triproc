@@ -23,6 +23,7 @@ int main(int argc, const char * argv[])
         DLog(@"Starting!");
         
         NSString* file = [NSString stringWithCString:argv[1] encoding:NSASCIIStringEncoding];
+        
         if (![[NSFileManager defaultManager] fileExistsAtPath:file])
         {
             NSLog(@"File %@ not available.", file);
@@ -43,26 +44,32 @@ int main(int argc, const char * argv[])
         
         NSMutableArray* finalTriangleList = [[NSMutableArray alloc] init];
         
-        double lastArea = 0;
+        DNATriangle* previousTraingle = nil;
+        int degenerateTriangles = 0;
+        int identicalTriangles = 0;
+
         for (DNATriangle* t in sortedTriangles)
         {
+            if (t.area < 10)
+                DLog(@"%f --- ", t.area);
             if (t.area < AREA_ERROR)
             {
                 DLog(@"Degenerate triangle");
+                degenerateTriangles++;
             }
-            else if(abs(lastArea - t.area) < AREA_ERROR)
+            else if(/*abs(previousTraingle.area - t.area) < AREA_ERROR && */[t isEqual:previousTraingle])
             {
-                
-                // check to see if points are the same
                 DLog(@"Same area: %f", t.area);
+                identicalTriangles++;
             } else {
-                lastArea = t.area;
                 [finalTriangleList addObject:t];
             }
-                
+            
+            previousTraingle = t;
         }
         
         DLog(@"Done.");
+        DLog(@"Identical triangles=%d. Degenerate triangles=%d total resulting triangles=%d original number of triangles=%d", identicalTriangles, degenerateTriangles, finalTriangleList.count, sortedTriangles.count);
     
     }
     return 0;
