@@ -66,8 +66,9 @@ int main(int argc, const char * argv[])
             previousTraingle = t;
         }
         
+       
         DLog(@"Done.");
-        DLog(@"Identical triangles=%d. Degenerate triangles=%d total resulting triangles=%d original number of triangles=%d", identicalTriangles, degenerateTriangles, finalTriangleList.count, sortedTriangles.count);
+        DLog(@"Identical triangles=%d. Degenerate triangles=%d total resulting triangles=%d original number of triangles=%d", identicalTriangles, degenerateTriangles, (int)finalTriangleList.count, (int)sortedTriangles.count);
     
     }
     return 0;
