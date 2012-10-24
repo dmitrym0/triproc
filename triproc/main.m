@@ -57,7 +57,7 @@ int main(int argc, const char * argv[])
                 DLog(@"Degenerate triangle");
                 degenerateTriangles++;
             }
-            else if(/*abs(previousTraingle.area - t.area) < AREA_ERROR && */[t isEqual:previousTraingle])
+            else if(abs(previousTraingle.area - t.area) < ERROR && [t isEqual:previousTraingle])
             {
                 DLog(@"Same area: %f", t.area);
                 identicalTriangles++;

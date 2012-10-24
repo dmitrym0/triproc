@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-#define AREA_ERROR 0.0001
+#define AREA_ERROR 2.0
 #define ERROR 0.0001
 
 @interface DNAPoint: NSObject
